@@ -10,7 +10,7 @@ AddEventHandler("baker-kokain:reward", function()
     local src = source
     local xPlayer = QBCore.Functions.GetPlayer(src)
     if xPlayer then
-        xPlayer.Functions.AddItem("kokain", )
+        xPlayer.Functions.AddItem("kokain", 5)
         TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items["kokain"], "add")
         xPlayer.Functions.AddMoney("cash", 1000, "kokain-collected")
         TriggerClientEvent("QBCore:Notify", src, "Kokain toplandı!", "success")
@@ -32,7 +32,7 @@ AddEventHandler("baker-kokain:kokainpaket", function()
     if Player.Functions.RemoveItem("kokain", 5) then
 			TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["kokain"], 'remove')
 			QBCore.Functions.Notify("Heheee", "success")
-			if Player.Functions.AddItem("paketlemiskokain", 1) then
+			if Player.Functions.AddItem("paketlemiskokain") then
 			    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["paketlemiskokain"], 'add')
             else
                 TriggerClientEvent('QBCore:Notify', src, "Ben gayim")
