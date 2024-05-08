@@ -1,5 +1,7 @@
 Dependencies
 
+https://github.com/Nathan-FiveM/qb-lock
+
 https://github.com/qbcore-framework/qb-core
 
 https://github.com/qbcore-framework/qb-target
